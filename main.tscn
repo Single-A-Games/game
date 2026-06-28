@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://b2w8psh5gq154" path="res://gui.tscn" id="2_0xm2m"]
 
 [node name="Main" type="Node2D" unique_id=1183902976]
 texture_filter = 5
@@ -9,3 +10,5 @@ texture_filter = 5
 zoom = Vector2(3, 3)
 
 [node name="Player" parent="." unique_id=2084843673 instance=ExtResource("1_ig7tw")]
+
+[node name="Gui" parent="." unique_id=1817627540 instance=ExtResource("2_0xm2m")]
