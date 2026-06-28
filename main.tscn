@@ -135,9 +135,7 @@ shape = SubResource("BoxShape3D_n50qa")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D10" unique_id=264380128]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0424805, 0, 0)
 mesh = SubResource("BoxMesh_n50qa")
-<<<<<<< HEAD
 
 [node name="Player" parent="." unique_id=631654043 instance=ExtResource("1_ig7tw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5621415, 0.51209295)
-=======
->>>>>>> 196f50b82ef4b126df9cb584b45cc2826c8b7c93
+
