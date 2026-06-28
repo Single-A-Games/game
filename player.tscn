@@ -1,7 +1,28 @@
 [gd_scene format=3 uid="uid://ckudr8chj1kgo"]
 
 [ext_resource type="Script" uid="uid://b0gd8hrqpvtbb" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://baw3ipba01wr6" path="res://assets/art/man_with_mustache.png" id="2_onrkg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fv55i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fv55i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_onrkg")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D" unique_id=2084843673]
 collision_layer = 2
+motion_mode = 1
 script = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=783495689]
+shape = SubResource("CapsuleShape2D_fv55i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1156781932]
+sprite_frames = SubResource("SpriteFrames_fv55i")
