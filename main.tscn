@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_ig7tw"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_n50qa"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_n50qa"]
@@ -162,3 +164,6 @@ shape = SubResource("BoxShape3D_n50qa")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/StaticBody3D/StaticBody3D/StaticBody3D/StaticBody3D/StaticBody3D/StaticBody3D/StaticBody3D/StaticBody3D/StaticBody3D/StaticBody3D/StaticBody3D/StaticBody3D/StaticBody3D/StaticBody3D/StaticBody3D/StaticBody3D" unique_id=993960961]
 transform = Transform3D(1.2551646, 0, 3.637979e-12, 0, 1, 0, 4.7683716e-07, 0, 3.1430364, -0.14204895, 0, 0.33520937)
 mesh = SubResource("BoxMesh_n50qa")
+
+[node name="Player" parent="." unique_id=631654043 instance=ExtResource("1_ig7tw")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.5621415, 0.51209295)
