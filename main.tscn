@@ -35,7 +35,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0424805, 0, 0)
 mesh = SubResource("BoxMesh_n50qa")
 
 [node name="Player" parent="." unique_id=631654043 instance=ExtResource("1_ig7tw")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.6553707, -0.2633766, -2.5515862)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6553707, -0.2633766, -2.5515862)
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1713297162]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09688401, -0.6035708, 3.124605)
