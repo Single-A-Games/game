@@ -166,4 +166,4 @@ transform = Transform3D(1.2551646, 0, 3.637979e-12, 0, 1, 0, 4.7683716e-07, 0, 3
 mesh = SubResource("BoxMesh_n50qa")
 
 [node name="Player" parent="." unique_id=631654043 instance=ExtResource("1_ig7tw")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.5621415, 0.51209295)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5621415, 0.51209295)
