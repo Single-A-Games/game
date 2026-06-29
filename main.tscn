@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="PackedScene" uid="uid://cfnjqr5m82ity" path="res://Entities/enemy.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://b2w8psh5gq154" path="res://gui.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cfnjqr5m82ity" path="res://Entities/enemy.tscn" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cdf5lrcdg160b" path="res://Entities/player.tscn" id="2_h2yge"]
 
 [node name="Main" type="Node2D" unique_id=1183902976]
@@ -9,7 +10,9 @@ texture_filter = 5
 [node name="Camera2D" type="Camera2D" parent="." unique_id=100023550]
 zoom = Vector2(3, 3)
 
-[node name="Enemy" parent="." unique_id=1642012600 instance=ExtResource("2_0xm2m")]
-position = Vector2(110, -51)
-
 [node name="Player" parent="." unique_id=923334760 instance=ExtResource("2_h2yge")]
+
+[node name="Enemy" parent="." unique_id=1642012600 instance=ExtResource("2_1bvp3")]
+position = Vector2(130, -66)
+
+[node name="Gui" parent="." unique_id=1817627540 instance=ExtResource("2_0xm2m")]
