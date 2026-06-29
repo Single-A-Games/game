@@ -1,24 +1,24 @@
 [gd_scene format=3 uid="uid://cb8m45kcmgv36"]
 
-[ext_resource type="Texture2D" uid="uid://dyrska0lanhuf" path="res://assets/art/Alan Sword.png" id="1_74bdg"]
 [ext_resource type="Script" uid="uid://dwkpsmplm13fi" path="res://sword.gd" id="1_e4ynd"]
+[ext_resource type="Texture2D" uid="uid://bg46lu0fsa8wl" path="res://assets/art/Alan Sword Big.png" id="2_e4ynd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fv55i"]
-radius = 3.0
-height = 24.0
+radius = 4.0
+height = 48.0
 
 [node name="Sword" type="Node2D" unique_id=670952546]
 script = ExtResource("1_e4ynd")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1327902214]
-position = Vector2(8, 0)
+position = Vector2(16, 0)
 rotation = 0.7853982
-texture = ExtResource("1_74bdg")
+texture = ExtResource("2_e4ynd")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=302834609]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1386145817]
-position = Vector2(8, 0)
+position = Vector2(16, 0)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_fv55i")
 

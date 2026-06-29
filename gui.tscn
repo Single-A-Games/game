@@ -1,13 +1,7 @@
 [gd_scene format=3 uid="uid://b2w8psh5gq154"]
 
-[ext_resource type="Texture2D" uid="uid://dpgr5wa1q8wl" path="res://assets/art/button.png" id="1_80edf"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n50qa"]
-texture = ExtResource("1_80edf")
-texture_margin_left = 16.0
-texture_margin_top = 16.0
-texture_margin_right = 16.0
-texture_margin_bottom = 16.0
+[ext_resource type="StyleBox" uid="uid://bktqg8hxi6wb6" path="res://button_normal.tres" id="1_6lon5"]
+[ext_resource type="StyleBox" uid="uid://d1f1u1dlsk72o" path="res://button_hover.tres" id="2_q8o8l"]
 
 [node name="Gui" type="Control" unique_id=1817627540]
 texture_filter = 5
@@ -19,9 +13,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=751156281]
-visible = false
 
-[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1489113791]
+[node name="MainMenu" type="Panel" parent="CanvasLayer" unique_id=1489113791]
+visible = false
 texture_filter = 5
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,10 +23,34 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="CanvasLayer/Panel" unique_id=897085143]
-layout_mode = 0
-offset_left = 460.0
-offset_top = 780.0
-offset_right = 1300.0
-offset_bottom = 908.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_n50qa")
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu" unique_id=417191848]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_right = 400.0
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Button" type="Button" parent="CanvasLayer/MainMenu/VBoxContainer" unique_id=909996622]
+custom_minimum_size = Vector2(800, 100)
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = ExtResource("1_6lon5")
+theme_override_styles/hover = ExtResource("2_q8o8l")
+text = "Start Game"
+
+[node name="Button2" type="Button" parent="CanvasLayer/MainMenu/VBoxContainer" unique_id=799315291]
+custom_minimum_size = Vector2(800, 100)
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = ExtResource("1_6lon5")
+theme_override_styles/hover = ExtResource("2_q8o8l")
+text = "Settings"

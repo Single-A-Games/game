@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyrska0lanhuf"
-path="res://.godot/imported/Alan Sword.png-033be5647599797bb5cf9e5125860f89.ctex"
+uid="uid://bjp8mrstt6mi6"
+path="res://.godot/imported/stone brick wall.png-d67a85978509799f026aec170037d9e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Alan Sword.png"
-dest_files=["res://.godot/imported/Alan Sword.png-033be5647599797bb5cf9e5125860f89.ctex"]
+source_file="res://assets/art/stone brick wall.png"
+dest_files=["res://.godot/imported/stone brick wall.png-d67a85978509799f026aec170037d9e5.ctex"]
 
 [params]
 

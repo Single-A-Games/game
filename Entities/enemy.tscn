@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dgc02iyo456b3" path="res://20250411_201942.webp" id="4_fjgg4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wl0gf"]
-radius = 9.0
-height = 26.0
+radius = 18.0
+height = 52.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fv55i"]
 animations = [{
@@ -31,7 +31,7 @@ script = ExtResource("2_0ifcb")
 shape = SubResource("CapsuleShape2D_wl0gf")
 
 [node name="AnimatedSprite2D" parent="." index="1" unique_id=194535469]
-scale = Vector2(0.03169572, 0.03169571)
+scale = Vector2(0.06339145, 0.06339142)
 sprite_frames = SubResource("SpriteFrames_fv55i")
 frame = 1
 frame_progress = 0.17801866
