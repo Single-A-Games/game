@@ -19,6 +19,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=751156281]
+visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1489113791]
 texture_filter = 5

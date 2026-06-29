@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
+[ext_resource type="Script" uid="uid://crtdv5djku0ij" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://b2w8psh5gq154" path="res://gui.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cfnjqr5m82ity" path="res://Entities/enemy.tscn" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cdf5lrcdg160b" path="res://Entities/player.tscn" id="2_h2yge"]
+[ext_resource type="AudioStream" uid="uid://c4qvso80uvd4r" path="res://assets/music/distinguished_gentlesir.mp3" id="4_1bvp3"]
 
 [node name="Main" type="Node2D" unique_id=1183902976]
 texture_filter = 5
+script = ExtResource("1_lquwl")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=100023550]
 zoom = Vector2(3, 3)
@@ -13,6 +16,27 @@ zoom = Vector2(3, 3)
 [node name="Player" parent="." unique_id=923334760 instance=ExtResource("2_h2yge")]
 
 [node name="Enemy" parent="." unique_id=1642012600 instance=ExtResource("2_1bvp3")]
-position = Vector2(130, -66)
+position = Vector2(208, -22)
+
+[node name="Enemy2" parent="." unique_id=1165077842 instance=ExtResource("2_1bvp3")]
+position = Vector2(193, -134)
+
+[node name="Enemy3" parent="." unique_id=1067838278 instance=ExtResource("2_1bvp3")]
+position = Vector2(-135, 0)
+
+[node name="Enemy4" parent="." unique_id=41790223 instance=ExtResource("2_1bvp3")]
+position = Vector2(-68, 85)
+
+[node name="Enemy5" parent="." unique_id=528563780 instance=ExtResource("2_1bvp3")]
+position = Vector2(121, -154)
+
+[node name="Enemy6" parent="." unique_id=469137874 instance=ExtResource("2_1bvp3")]
+position = Vector2(-106, -101)
+
+[node name="Enemy7" parent="." unique_id=96454611 instance=ExtResource("2_1bvp3")]
+position = Vector2(173, 59)
 
 [node name="Gui" parent="." unique_id=1817627540 instance=ExtResource("2_0xm2m")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1540183839]
+stream = ExtResource("4_1bvp3")

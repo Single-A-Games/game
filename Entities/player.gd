@@ -29,7 +29,7 @@ func handle_actions(_delta: float) -> void:
 		$Arm.show()
 		arm_tween = create_tween()
 		
-		arm_tween.tween_property($Arm, "rotation_degrees", ref_angle + swing_degrees / 2, .75).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+		arm_tween.tween_property($Arm, "rotation_degrees", ref_angle + swing_degrees / 2, .25).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
 		
 		await arm_tween.finished
 		
