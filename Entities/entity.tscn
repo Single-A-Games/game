@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dq1em2fw3y4ay"]
+
+[ext_resource type="Script" uid="uid://b1v881sx4dxc6" path="res://Entities/entity.gd" id="1_qgafo"]
+
+[node name="Entity" type="CharacterBody2D" unique_id=1642012600]
+motion_mode = 1
+script = ExtResource("1_qgafo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1548483903]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=194535469]
+
+[node name="Arm" type="Node2D" parent="." unique_id=611049039]
+
+[node name="Hand" type="Marker2D" parent="Arm" unique_id=1567337374]
+position = Vector2(8, 0)
