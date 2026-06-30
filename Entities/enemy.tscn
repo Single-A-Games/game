@@ -35,3 +35,17 @@ scale = Vector2(0.06339145, 0.06339142)
 sprite_frames = SubResource("SpriteFrames_fv55i")
 frame = 1
 frame_progress = 0.17801866
+
+[node name="ProgressBar" type="ProgressBar" parent="." index="3" unique_id=1137316178]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -33.0
+offset_right = 13.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+show_percentage = false

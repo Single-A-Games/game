@@ -1,6 +1,7 @@
 extends Node2D
 
 
+@export var damage = 25
 @export var knockback = 300
 @export var cooldown := .75
 @export var swing_degrees := 150.0
@@ -60,3 +61,4 @@ func is_ready() -> bool:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Enemy:
 		body.apply_knockback((Vector2.RIGHT * knockback).rotated(global_position.angle_to_point(body.global_position)))
+		body.health -= damage

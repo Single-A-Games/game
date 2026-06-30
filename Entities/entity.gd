@@ -7,8 +7,12 @@ class_name Entity
 
 @export var KNOCKBACK_DECELERATION = 1000
 
+@export var MAX_HEALTH = 100
+
 var move_dir := Vector2.ZERO
 var knockback_stun := false
+
+@onready var health = MAX_HEALTH
 
 
 func _physics_process(delta: float) -> void:
@@ -16,6 +20,9 @@ func _physics_process(delta: float) -> void:
 		handle_knockback(delta)
 	else:
 		handle_movement(delta)
+	
+	if health <= 0:
+		queue_free()
 
 
 func handle_movement(delta: float) -> void:
