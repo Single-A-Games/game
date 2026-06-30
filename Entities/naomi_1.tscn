@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dk0a42g8dvtb5"]
+
+[ext_resource type="PackedScene" uid="uid://cfnjqr5m82ity" path="res://Entities/enemy.tscn" id="1_x1c1k"]
+[ext_resource type="Texture2D" uid="uid://dgc02iyo456b3" path="res://20250411_201942.webp" id="2_mr1h3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_taegk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mr1h3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e1mh1"]
+radius = 29.017237
+
+[node name="Naomi1" unique_id=1642012600 instance=ExtResource("1_x1c1k")]
+damage = 15
+
+[node name="AnimatedSprite2D" parent="." index="1" unique_id=194535469]
+sprite_frames = SubResource("SpriteFrames_taegk")
+frame_progress = 0.0
+
+[node name="CollisionShape2D" parent="AttackBox" parent_id_path=PackedInt32Array(1959568954) index="0" unique_id=1075870638]
+shape = SubResource("CircleShape2D_e1mh1")

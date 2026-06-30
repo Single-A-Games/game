@@ -1,8 +1,12 @@
 extends Node2D
 
 
-var timer = 10
-var enemy = preload("res://Entities/enemy.tscn")
+var timer = 0
+var enemies := [
+	preload("res://Entities/naomi_1.tscn"),
+	preload("res://Entities/naomi_2.tscn"),
+	preload("res://Entities/naomi_3.tscn"),
+]
 
 
 func _ready() -> void:
@@ -12,9 +16,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if timer <= 0:
 		timer = randf_range(5, 15)
-		for x in range(4):
-			var new_enemy = enemy.instantiate()
-			add_child(new_enemy)
-			new_enemy.position = Vector2(randf_range(-280, 280), randf_range(-280, 280))
+		spawn_enemy(4)
 	
 	timer -= delta
+
+
+func spawn_enemy(num: int):
+	for x in range(num):
+		var new_enemy = enemies.pick_random().instantiate()
+		add_child(new_enemy)
+		new_enemy.position = Vector2(randf_range(-220, 220), randf_range(-220, 220))

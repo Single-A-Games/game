@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dmbhyevqod5jt"]
+
+[ext_resource type="PackedScene" uid="uid://cfnjqr5m82ity" path="res://Entities/enemy.tscn" id="1_ocbnn"]
+[ext_resource type="Texture2D" uid="uid://6vmakencmyn6" path="res://assets/art/nomi2.jpg" id="2_m6ah8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kkupd"]
+size = Vector2(74, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6qu03"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_m6ah8")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mr1h3"]
+size = Vector2(80, 56)
+
+[node name="Naomi2" unique_id=1642012600 instance=ExtResource("1_ocbnn")]
+damage = 20
+SPEED = 30.0
+MAX_HEALTH = 75
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=1548483903]
+shape = SubResource("RectangleShape2D_kkupd")
+
+[node name="AnimatedSprite2D" parent="." index="1" unique_id=194535469]
+rotation = -1.5707964
+scale = Vector2(0.042098187, 0.03398833)
+sprite_frames = SubResource("SpriteFrames_6qu03")
+frame_progress = 0.0
+
+[node name="CollisionShape2D" parent="AttackBox" parent_id_path=PackedInt32Array(1959568954) index="0" unique_id=1075870638]
+shape = SubResource("RectangleShape2D_mr1h3")

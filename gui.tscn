@@ -3,6 +3,9 @@
 [ext_resource type="StyleBox" uid="uid://bktqg8hxi6wb6" path="res://button_normal.tres" id="1_6lon5"]
 [ext_resource type="StyleBox" uid="uid://d1f1u1dlsk72o" path="res://button_hover.tres" id="2_q8o8l"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_taegk"]
+bg_color = Color(0.13682574, 0.13682574, 0.13682568, 1)
+
 [node name="Gui" type="Control" unique_id=1817627540]
 texture_filter = 5
 layout_mode = 3
@@ -54,3 +57,42 @@ theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = ExtResource("1_6lon5")
 theme_override_styles/hover = ExtResource("2_q8o8l")
 text = "Settings"
+
+[node name="GameOver" type="Panel" parent="CanvasLayer" unique_id=1785117433]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_taegk")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/GameOver" unique_id=196270799]
+custom_minimum_size = Vector2(600, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/GameOver/Panel" unique_id=119187566]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = ExtResource("1_6lon5")
+text = "Game Over
+u suck"
+horizontal_alignment = 1
+vertical_alignment = 1

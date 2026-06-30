@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b7ih6sfauaym8"]
+
+[ext_resource type="PackedScene" uid="uid://cfnjqr5m82ity" path="res://Entities/enemy.tscn" id="1_l4we4"]
+[ext_resource type="Texture2D" uid="uid://l25hqm8tcg4m" path="res://assets/art/nomi3.webp" id="2_yvntr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ocbnn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yvntr")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m6ah8"]
+radius = 20.0
+height = 62.0
+
+[node name="naomi3" unique_id=1642012600 instance=ExtResource("1_l4we4")]
+SPEED = 75.0
+MAX_HEALTH = 50
+
+[node name="AnimatedSprite2D" parent="." index="1" unique_id=194535469]
+scale = Vector2(0.07072691, 0.06339142)
+sprite_frames = SubResource("SpriteFrames_ocbnn")
+frame_progress = 0.0
+
+[node name="ProgressBar" parent="." index="3" unique_id=1137316178]
+offset_top = -36.0
+offset_bottom = -32.0
+
+[node name="CollisionShape2D" parent="AttackBox" parent_id_path=PackedInt32Array(1959568954) index="0" unique_id=1075870638]
+shape = SubResource("CapsuleShape2D_m6ah8")
