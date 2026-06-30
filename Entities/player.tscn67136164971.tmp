@@ -30,9 +30,7 @@ shape = SubResource("CapsuleShape2D_h2yge")
 [node name="AnimatedSprite2D" parent="." index="1" unique_id=194535469]
 sprite_frames = SubResource("SpriteFrames_1bvp3")
 
-[node name="ItemEffect" type="Sprite2D" parent="." index="2" unique_id=1114161778]
-
-[node name="Arm" parent="." index="3" unique_id=611049039]
+[node name="Arm" parent="." index="2" unique_id=611049039]
 visible = false
 
 [node name="Hand" parent="Arm" index="0" unique_id=1567337374]

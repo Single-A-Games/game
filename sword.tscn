@@ -10,7 +10,7 @@ height = 48.0
 [node name="Sword" type="Node2D" unique_id=670952546]
 script = ExtResource("1_e4ynd")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1327902214]
+[node name="Blade" type="Sprite2D" parent="." unique_id=1327902214]
 position = Vector2(16, 0)
 rotation = 0.7853982
 texture = ExtResource("2_e4ynd")
