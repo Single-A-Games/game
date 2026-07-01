@@ -4,11 +4,10 @@ class_name Player
 
 @onready var arm_tween: Tween
 
+@export var max_stamina := 100.0
+
 var held_item = null
-
-
-func _ready() -> void:
-	$ProgressBar.max_value = MAX_HEALTH
+var stamina = max_stamina
 
 
 func _physics_process(delta: float) -> void:
@@ -17,7 +16,6 @@ func _physics_process(delta: float) -> void:
 	handle_movement(delta)
 	handle_actions(delta)
 	
-	$ProgressBar.value = health
 	
 	if health <= 0:
 		get_parent().get_node("Gui/CanvasLayer/GameOver").show()

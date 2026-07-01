@@ -4,6 +4,13 @@
 [ext_resource type="Script" uid="uid://b0gd8hrqpvtbb" path="res://Entities/player.gd" id="2_gb1tc"]
 [ext_resource type="Texture2D" uid="uid://ltuyjcay82n7" path="res://assets/art/emodudemct.png" id="3_taegk"]
 [ext_resource type="PackedScene" uid="uid://cb8m45kcmgv36" path="res://sword.tscn" id="4_taegk"]
+[ext_resource type="Script" uid="uid://dtlp8mu8ruy6j" path="res://Entities/ui.gd" id="5_xakct"]
+[ext_resource type="Texture2D" uid="uid://dq8i5ibn7o76i" path="res://assets/art/stat1.png" id="5_xy0x1"]
+[ext_resource type="Texture2D" uid="uid://jffokf5gyt1y" path="res://assets/art/stat0.png" id="6_xakct"]
+[ext_resource type="Texture2D" uid="uid://dkbwt2s4e301k" path="res://assets/art/stat3.png" id="7_k47j4"]
+[ext_resource type="Texture2D" uid="uid://fv1eh7dn5uel" path="res://assets/art/stat2.png" id="8_klb6e"]
+[ext_resource type="Texture2D" uid="uid://cr2lgjb1puo5j" path="res://assets/art/mana1.png" id="9_eyssl"]
+[ext_resource type="Texture2D" uid="uid://p8k4dkru4lsr" path="res://assets/art/mana0.png" id="10_pg4qw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h2yge"]
 height = 54.0
@@ -19,25 +26,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_taegk"]
-bg_color = Color(0.42745098, 0, 0, 1)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kee72"]
-bg_color = Color(0, 0.6156863, 0, 1)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fv55i"]
+bg_color = Color(0, 0, 0, 0)
 
 [node name="Player" unique_id=1642012600 instance=ExtResource("1_tcnsb")]
 z_index = 20
 script = ExtResource("2_gb1tc")
-SPEED = 100.0
-ACCELERATION = 600.0
+max_stamina = 100.0
+SPEED = 150.0
+ACCELERATION = 1000.0
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=1548483903]
 shape = SubResource("CapsuleShape2D_h2yge")
@@ -55,19 +52,52 @@ position = Vector2(16, 0)
 
 [node name="Sword" parent="Arm/Hand" index="0" unique_id=670952546 instance=ExtResource("4_taegk")]
 
-[node name="ProgressBar" type="ProgressBar" parent="." index="4" unique_id=1901155616]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -13.0
-offset_top = -33.0
-offset_right = 13.0
-offset_bottom = -29.0
+[node name="Ui" type="CanvasLayer" parent="." index="4" unique_id=143233074]
+script = ExtResource("5_xakct")
+
+[node name="Panel" type="Panel" parent="Ui" index="0" unique_id=856278398]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/background = SubResource("StyleBoxFlat_taegk")
-theme_override_styles/fill = SubResource("StyleBoxFlat_kee72")
-value = 50.0
-show_percentage = false
+theme_override_styles/panel = SubResource("StyleBoxFlat_fv55i")
+
+[node name="Panel" type="CenterContainer" parent="Ui/Panel" index="0" unique_id=1358136611]
+custom_minimum_size = Vector2(320, 320)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+offset_right = 200.0
+grow_vertical = 0
+
+[node name="HealthBar" type="TextureProgressBar" parent="Ui/Panel/Panel" index="0" unique_id=1262284597]
+layout_mode = 2
+value = 69.0
+fill_mode = 5
+radial_initial_angle = 14.2
+radial_fill_degrees = 300.0
+texture_under = ExtResource("5_xy0x1")
+texture_progress = ExtResource("6_xakct")
+
+[node name="StaminaBar" type="TextureProgressBar" parent="Ui/Panel/Panel" index="1" unique_id=1990969548]
+layout_mode = 2
+value = 20.0
+fill_mode = 5
+radial_initial_angle = 14.2
+radial_fill_degrees = 300.0
+texture_under = ExtResource("7_k47j4")
+texture_progress = ExtResource("8_klb6e")
+
+[node name="ManaBar" type="TextureProgressBar" parent="Ui/Panel/Panel" index="2" unique_id=2066130073]
+visible = false
+layout_mode = 2
+step = 0.1
+value = 76.6
+fill_mode = 3
+radial_initial_angle = 14.2
+radial_fill_degrees = 300.0
+texture_under = ExtResource("9_eyssl")
+texture_progress = ExtResource("10_pg4qw")

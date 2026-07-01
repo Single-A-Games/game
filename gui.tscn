@@ -40,7 +40,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 16
 
-[node name="Button" type="Button" parent="CanvasLayer/MainMenu/VBoxContainer" unique_id=909996622]
+[node name="StartButton" type="Button" parent="CanvasLayer/MainMenu/VBoxContainer" unique_id=909996622]
 custom_minimum_size = Vector2(800, 100)
 layout_mode = 2
 theme_override_constants/outline_size = 16
@@ -49,7 +49,7 @@ theme_override_styles/normal = ExtResource("1_6lon5")
 theme_override_styles/hover = ExtResource("2_q8o8l")
 text = "Start Game"
 
-[node name="Button2" type="Button" parent="CanvasLayer/MainMenu/VBoxContainer" unique_id=799315291]
+[node name="SettingsButton" type="Button" parent="CanvasLayer/MainMenu/VBoxContainer" unique_id=799315291]
 custom_minimum_size = Vector2(800, 100)
 layout_mode = 2
 theme_override_constants/outline_size = 16

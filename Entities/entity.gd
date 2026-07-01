@@ -44,3 +44,8 @@ func handle_knockback(delta: float):
 func apply_knockback(knockback: Vector2):
 	knockback_stun = true
 	velocity = knockback
+
+
+func damage(dmg: float, knockback: Vector2):
+	health -= dmg
+	apply_knockback(knockback)

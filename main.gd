@@ -1,16 +1,18 @@
 extends Node2D
 
 
-var timer = 0
 var enemies := [
 	preload("res://Entities/naomi_1.tscn"),
 	preload("res://Entities/naomi_2.tscn"),
 	preload("res://Entities/naomi_3.tscn"),
 ]
 
+var game_active = false
+var timer = 20
+
 
 func _ready() -> void:
-	pass #$AudioStreamPlayer.play()
+	$Gui/CanvasLayer/MainMenu/VBoxContainer/StartButton.connect("pressed", func(): game_active = true)
 
 
 func _process(delta: float) -> void:

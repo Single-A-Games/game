@@ -23,7 +23,7 @@ size = Vector2(80, 56)
 [node name="Naomi2" unique_id=1642012600 instance=ExtResource("1_ocbnn")]
 damage = 20
 SPEED = 30.0
-MAX_HEALTH = 75
+MAX_HEALTH = 150
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=1548483903]
 shape = SubResource("RectangleShape2D_kkupd")

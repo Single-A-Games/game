@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cdo0o85o0m1hs"]
+
+[ext_resource type="PackedScene" uid="uid://cfnjqr5m82ity" path="res://Entities/enemy.tscn" id="1_wy0u6"]
+[ext_resource type="Texture2D" uid="uid://b1fl71sdwnp0i" path="res://assets/art/john slime.png" id="2_dnesx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uahnk"]
+radius = 9.0
+height = 28.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rcrc"]
+atlas = ExtResource("2_dnesx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rj2v"]
+atlas = ExtResource("2_dnesx")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dnesx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rcrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rj2v")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7rcrc"]
+radius = 11.0
+height = 32.0
+
+[node name="JohnSlime" unique_id=1642012600 instance=ExtResource("1_wy0u6")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=1548483903]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_uahnk")
+
+[node name="AnimatedSprite2D" parent="." index="1" unique_id=194535469]
+position = Vector2(0, -7)
+scale = Vector2(1, 1)
+sprite_frames = SubResource("SpriteFrames_dnesx")
+frame_progress = 0.0
+
+[node name="CollisionShape2D" parent="AttackBox" parent_id_path=PackedInt32Array(1959568954) index="0" unique_id=1075870638]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_7rcrc")
