@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://g40bx3rhsi0g"]
+
+[ext_resource type="TileSet" uid="uid://gp5ay2gx6eip" path="res://dungeon.tres" id="1_k3jq5"]
+
+[node name="RoomBase" type="Node2D" unique_id=2022335459]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=329379587]
+tile_set = ExtResource("1_k3jq5")
