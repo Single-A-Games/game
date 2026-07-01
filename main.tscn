@@ -29,21 +29,63 @@ stream = ExtResource("4_1bvp3")
 
 [node name="JohnSlime" parent="." unique_id=1642012600 instance=ExtResource("7_272bh")]
 position = Vector2(752, -318)
+attack_damage = 10
+attack_knockback = 200
+SPEED = 50.0
+ACCELERATION = 300.0
+KNOCKBACK_DECELERATION = 1000
+MAX_HEALTH = 50
 
 [node name="JohnSlime2" parent="." unique_id=2020624642 instance=ExtResource("7_272bh")]
 position = Vector2(982, 343)
+attack_damage = 10
+attack_knockback = 200
+SPEED = 50.0
+ACCELERATION = 300.0
+KNOCKBACK_DECELERATION = 1000
+MAX_HEALTH = 100
 
 [node name="JohnSlime5" parent="." unique_id=855515708 instance=ExtResource("7_272bh")]
 position = Vector2(1360, 345)
+attack_damage = 10
+attack_knockback = 200
+SPEED = 50.0
+ACCELERATION = 300.0
+KNOCKBACK_DECELERATION = 1000
+MAX_HEALTH = 100
 
 [node name="JohnSlime6" parent="." unique_id=1795883799 instance=ExtResource("7_272bh")]
 position = Vector2(717, 119)
+attack_damage = 10
+attack_knockback = 200
+SPEED = 50.0
+ACCELERATION = 300.0
+KNOCKBACK_DECELERATION = 1000
+MAX_HEALTH = 100
 
 [node name="JohnSlime7" parent="." unique_id=776121865 instance=ExtResource("7_272bh")]
 position = Vector2(1111, -179)
+attack_damage = 10
+attack_knockback = 200
+SPEED = 50.0
+ACCELERATION = 300.0
+KNOCKBACK_DECELERATION = 1000
+MAX_HEALTH = 100
 
 [node name="JohnSlime3" parent="." unique_id=116511818 instance=ExtResource("7_272bh")]
 position = Vector2(1339, -329)
+attack_damage = 10
+attack_knockback = 200
+SPEED = 50.0
+ACCELERATION = 300.0
+KNOCKBACK_DECELERATION = 1000
+MAX_HEALTH = 100
 
 [node name="JohnSlime4" parent="." unique_id=1276734911 instance=ExtResource("7_272bh")]
 position = Vector2(719, 300)
+attack_damage = 10
+attack_knockback = 200
+SPEED = 50.0
+ACCELERATION = 300.0
+KNOCKBACK_DECELERATION = 1000
+MAX_HEALTH = 100
